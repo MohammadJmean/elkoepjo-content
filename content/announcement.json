@@ -1,1 +1,6 @@
-{"active":false,"text_en":"Our Khalda showroom is open: book a free live demo","text_ar":"صالة العرض في خلدا مفتوحة: احجز عرضًا حيًا مجانيًا","link":"#visit"}
+{
+  "active": true,
+  "text_en": "Our Khalda showroom is open: book a free live demo",
+  "text_ar": "صالة العرض في خلدا مفتوحة: احجز عرضًا حيًا مجانيًا",
+  "link": "#visit"
+}
