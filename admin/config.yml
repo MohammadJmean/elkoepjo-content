@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: MohammadJmean/elkoepjo-content
+  branch: main
+  commit_messages:
+    update: "Update {{collection}}: {{slug}}"
+
+site_url: https://www.elkoepjo.com
+display_url: https://www.elkoepjo.com
+logo_url: /favicon.png
+media_folder: img/uploads
+public_folder: /img/uploads
+
+collections:
+  - name: settings
+    label: Website content
+    files:
+      - name: offers
+        label: Offers
+        file: content/offers.json
+        format: json
+        fields:
+          - name: items
+            label: Offers
+            label_singular: Offer
+            widget: list
+            summary: "{{fields.title_en}} ({{fields.start}} → {{fields.end}})"
+            fields:
+              - { name: active, label: "Active (show on website)", widget: boolean, default: true }
+              - { name: title_en, label: "Title (English)", widget: string }
+              - { name: title_ar, label: "Title (Arabic)", widget: string, required: false }
+              - { name: text_en, label: "Text (English)", widget: text, required: false }
+              - { name: text_ar, label: "Text (Arabic)", widget: text, required: false }
+              - { name: product, label: "Product model or code (optional, e.g. CRM-91H)", widget: string, required: false }
+              - { name: price, label: "Offer price in JD (optional)", widget: number, value_type: float, required: false }
+              - { name: start, label: "Start date", widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD", required: false }
+              - { name: end, label: "End date", widget: datetime, time_format: false, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD", required: false }
+              - { name: image, label: "Picture (optional)", widget: image, required: false }
+              - { name: link, label: "Button link (optional, e.g. #visit or #contact)", widget: string, required: false }
+      - name: prices
+        label: Prices
+        file: content/prices.json
+        format: json
+        fields:
+          - name: items
+            label: Product prices
+            label_singular: Price
+            widget: list
+            summary: "{{fields.code}} – JD {{fields.price}}"
+            fields:
+              - { name: code, label: "Model or ELKO code (e.g. CRM-91H or 7521)", widget: string }
+              - { name: description, label: "Note for you (not shown)", widget: string, required: false }
+              - { name: price, label: "Price in JD", widget: number, value_type: float, required: false }
+              - { name: show, label: "Show on website", widget: boolean, default: true }
+      - name: announcement
+        label: Top announcement bar
+        file: content/announcement.json
+        format: json
+        fields:
+          - { name: active, label: "Show the bar", widget: boolean, default: false }
+          - { name: text_en, label: "Text (English)", widget: string, required: false }
+          - { name: text_ar, label: "Text (Arabic)", widget: string, required: false }
+          - { name: link, label: "Link (optional, e.g. #visit)", widget: string, required: false }
