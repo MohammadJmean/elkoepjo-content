@@ -1,1 +1,17 @@
-{"items":[{"active":true,"title_en":"Opening offer: 10% off CRM-91H time relays","title_ar":"عرض الافتتاح: خصم 10% على مرحّلات CRM-91H","text_en":"Celebrating the opening of ELKO EP Jordan in Khalda. Valid while stock lasts.","text_ar":"بمناسبة افتتاح فرع ELKO EP الأردن في خلدا. العرض ساري حتى نفاد الكمية.","product":"CRM-91H","price":null,"start":"2026-10-12","end":"2026-11-30","image":"","link":""}]}
+{
+  "items": [
+    {
+      "active": false,
+      "title_en": "Opening offer: 10% off CRM-91H time relays",
+      "title_ar": "عرض الافتتاح: خصم 10% على مرحّلات CRM-91H",
+      "text_en": "Celebrating the opening of ELKO EP Jordan in Khalda. Valid while stock lasts.",
+      "text_ar": "بمناسبة افتتاح فرع ELKO EP الأردن في خلدا. العرض ساري حتى نفاد الكمية.",
+      "product": "CRM-91H",
+      "price": null,
+      "start": "2026-10-12",
+      "end": "2026-11-30",
+      "image": "",
+      "link": ""
+    }
+  ]
+}
